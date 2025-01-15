@@ -21,18 +21,22 @@ function App() {
   return (
     <div className="App">
       <table>
-        <tr>
-          <th>書籍名</th>
-          <th>著者</th>
-          <th>価格&nbsp;(円)</th>
-        </tr>
-        {data.books.map((row) => (
+        <thead>
           <tr>
-            <td>{row.title}</td>
-            <td>{row.author}</td>
-            <td align="right">{row.price}</td>
+            <th>書籍名</th>
+            <th>著者</th>
+            <th>価格&nbsp;(円)</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {data.books.map((row) => (
+            <tr key={row.id}>
+              <td>{row.title}</td>
+              <td>{row.author}</td>
+              <td align="right">{row.price}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
