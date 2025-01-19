@@ -33,6 +33,6 @@ spec:
     spec:
       containers:
       - name: catalogue-db
-        image: my-mysql:0.1
+        image: registry.gitlab.com/gihyo-ms-dev-book/handson/sec3/3.1-bookshop-sample/catalogue
         ports:
         - containerPort: 3306
